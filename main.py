@@ -482,11 +482,11 @@ class MainApp(tk.Tk):
         self.menubar.add_cascade(label='Plugins', menu=self.plugins_menu)
 
         # Users menu
-        self.user_menu = tk.Menu(self.menubar, tearoff=0)
+        #self.user_menu = tk.Menu(self.menubar, tearoff=0)
 
-        self._update_menubar_users()
+        #self._update_menubar_users()
 
-        self.menubar.add_cascade(label='Users', menu=self.user_menu)
+        #self.menubar.add_cascade(label='Users', menu=self.user_menu)
 
         # Help menu
         self.info_menu = tk.Menu(self.menubar, tearoff=0)
@@ -700,7 +700,7 @@ class MainApp(tk.Tk):
                 self.page_history.pop()
                 self.page_history.append(page_name)
 
-        self._update_menubar_users()
+        #self._update_menubar_users()
         self.update()
         self.user_manager.set_app_settings('start page', 'mainpage', page_name)
         self.user_manager.set_app_settings('start page', 'subpage', '')

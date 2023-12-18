@@ -26,6 +26,9 @@ import core
 import gui
 import plugins
 from core.exceptions import *
+from locales import Translator as langT
+
+_ = langT('main_sharktools', 'en').lang.gettext
 
 ROOT_PATH = Path(__file__).parent
 
@@ -760,9 +763,9 @@ class MainApp(tk.Tk):
     def get_plugins():
         return PLUGINS
 
-    def open_progress_window(self, text='Programmet jobbar. RÖR INGET!'):
+    def open_progress_window(self, text=_('Programmet jobbar. RÖR INGET!')):
         self.progress_text.set(text)
-        self.progress_window.title('Arbetar...')
+        self.progress_window.title(_('Arbetar...'))
         x = self.winfo_x()
         y = self.winfo_y()
         self.progress_window.geometry("+%d+%d" % (x + 300, y + 200))
